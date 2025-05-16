@@ -11,3 +11,6 @@ You will also need to install Wireviz/Graphviz.
 Instructions on how to do so are out of the scope of this document.
 
 ## Notes
+
+## Output
+![Wiring harness](zombie.png)
