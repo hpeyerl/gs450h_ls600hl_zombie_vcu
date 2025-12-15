@@ -16,7 +16,8 @@ CONNECTORS=  \
              connectors/toyota_mg1_resolver_conn.yml \
              connectors/toyota_mg2_resolver_conn.yml \
              connectors/zombie56.yml  \
-             connectors/12awg_heat_shrink_ring_terminal.yml
+             connectors/12awg_heat_shrink_ring_terminal.yml \
+             connectors/auto_relay.yml
 
 zombie.yml:  zombie.cpp  ${CONNECTORS}
 	cpp zombie.cpp -o zombie.yml
