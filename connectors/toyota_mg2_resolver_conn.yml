@@ -1,5 +1,5 @@
   mg2_resolver_conn:
-    type: 90980-12520
+    type: Sumitomo 6189-1240 TS025-8 90980-12520
     subtype: female
     pinlabels: [ MRF, MSN, MCS, MMTG, MRFG, MSNG, MCSG, MMT ]
     image:
