@@ -7,10 +7,11 @@ connectors:
 #include "connectors/toyota_mg1_resolver_conn.yml"
 #include "connectors/toyota_mg2_resolver_conn.yml"
 #include "connectors/l110_vehicle_speed_sensor.yml"
-#include "connectors/honda_fit_pedal.yml"
+#include "connectors/honda_crv_pedal.yml"
 #include "connectors/12awg_heat_shrink_ring_terminal.yml"
+#include "connectors/auto_relay.yml"
 
-// Inverter connector colors
+// LS600HL Inverter connector colors
 //    colors: [ BN, WH, BK, WH, BN, BK, WH, BN, BU, BK,
 //              BK, BN, WH, BK, WH, BK, YE, RD, WH, GN,
 //              BN, WH, BK, WH, BK, BN, YE, RD, GN, WHBK,
@@ -26,7 +27,7 @@ cables:
   Go-NoGo-Pedal:
     wirecount: 4
     color_code: DIN
-    colors: [ YEBU, BNBU, WHBU, WHGN ]
+    colors: [ BK, RD, WH, GN ]
 
   MG1_Resolver:
     wirecount: 6
@@ -43,6 +44,18 @@ cables:
     colors: [ BK ]
 
   Oil_Pump_B:
+    wirecount: 1
+    colors: [ RD ]
+
+  Inverter_Power:
+    wirecount: 4
+    colors: [ BK, BK, BU, BU ]
+
+  Inverter_Power_Relay:
+    wirecount: 4
+    colors: [ BK, RD, RD, BU ]
+
+  Inverter_Power_B:
     wirecount: 1
     colors: [ RD ]
 
@@ -79,6 +92,22 @@ connections:
     - ls600hl_inverter: [ 26 ]
     - MG2_Resolver: [ s ]
   -
-    - zombie56: [ 45-48]
-    - Go-NoGo-Pedal: [ 1-4 ]
-    - honda_fit_pedal: [ 1, 2, 5, 6 ]
+    - zombie56: [ 45, 45 ]
+    - Go-NoGo-Pedal: [ 1, 1 ]
+    - honda_crv_pedal: [ 2, 5 ]
+  -
+    - zombie56: [ 46, 47 ]
+    - Go-NoGo-Pedal: [ 2, 3 ]
+    - honda_crv_pedal: [ 6, 3 ]
+  -
+    - zombie56: [ 48, 48 ]
+    - Go-NoGo-Pedal: [ 4, 4 ]
+    - honda_crv_pedal: [ 1, 4 ]
+  -
+    - ls600hl_inverter: [ 10, 11 ]
+    - Inverter_Power: [ 1, 2 ] 
+    - ring_terminal: [ 1, 1 ]
+  -
+    - ls600hl_inverter: [ 30, 31 ]
+    - Inverter_Power_Relay: [ 1, 1 ]
+    - iso_mini_5B_relay: [ 1, 1 ] 
